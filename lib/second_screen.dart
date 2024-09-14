@@ -16,6 +16,7 @@ class SecondScreen extends StatelessWidget {
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
             title: Text('Second Screen'),
           ),
+          // test
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
