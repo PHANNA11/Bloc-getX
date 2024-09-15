@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:ui_state/user/controller/user_controller.dart';
 import 'package:ui_state/user/screen/add_user.dart';
 
@@ -19,8 +20,8 @@ class ListUserScreen extends StatelessWidget {
               return ListTile(
                 title: Text(userController.lists[index].name.toString()),
                 subtitle: Text(userController.lists[index].position.toString()),
-                trailing:
-                    Text('DOB: ${userController.lists[index].dob.toString()}'),
+                trailing: Text(
+                    'DOB: ${DateFormat('dd/MMM/yyyy').format(userController.lists[index].dob!)}'),
               );
             },
             separatorBuilder: (context, index) => const Divider(),
